@@ -16,39 +16,55 @@ body {
 	}
 }
 
-.sidebar-wrapper {
-	position: absolute;
-	background-color: $color-first;
-	width: 20%;
-	height: 100%;
-	padding-top: 20px;
-
-	#sidebar-button {
-		left: 80%;
-		margin-top: 10px;
-		scale: 2;
-		align-content: center;
-		position: relative;
-		color: white;
-	}
-
-	.sidebar {
-		&:first-child {
-			margin-top: 20px;
-		}
-	}
-
-	.sidebar-item {
-		margin: 10px;
-		padding: 10px;
-		color: white;
-	}
+header {
+	z-index: 1;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	background: $color-second;
+	box-shadow: 0 1px 4px $color-first;
 }
 
-.shop-container {
-	padding: 25px;
+.nav {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 20px 0;
+}
+
+.container {
+	max-width: 1300px;
+	margin: auto;
+	width: 100%;
+}
+
+.logo {
+	font-size: 1.1rem;
+	color: $color-first;
+	font-weight: 500;
+}
+
+#nav-cart-icon {
+	font-size: 1.8rem;
+	cursor: pointer;
+}
+
+section {
+	padding: 5rem 0 3rem;
+}
+
+.section-title {
+	font-size: 1.5rem;
+	font-weight: 600;
+	text-align: center;
+}
+
+.shop {
+	margin-top: 2rem;
 
 	.shop-content {
+		margin-top: 2rem;
 		display: grid;
 		grid-template-columns: repeat(auto-fit, minmax(220px, auto));
 		gap: 1.5rem;

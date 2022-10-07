@@ -9,39 +9,63 @@ body * {
   color: #031927;
 }
 
-.sidebar-wrapper {
-  position: absolute;
-  background-color: #031927;
-  width: 20%;
-  height: 100%;
-  padding-top: 20px;
+header {
+  z-index: 1;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #9dd1f1;
+  -webkit-box-shadow: 0 1px 4px #031927;
+          box-shadow: 0 1px 4px #031927;
 }
 
-.sidebar-wrapper #sidebar-button {
-  left: 80%;
-  margin-top: 10px;
-  scale: 2;
-  -ms-flex-line-pack: center;
-      align-content: center;
-  position: relative;
-  color: white;
+.nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 20px 0;
 }
 
-.sidebar-wrapper .sidebar:first-child {
-  margin-top: 20px;
+.container {
+  max-width: 1300px;
+  margin: auto;
+  width: 100%;
 }
 
-.sidebar-wrapper .sidebar-item {
-  margin: 10px;
-  padding: 10px;
-  color: white;
+.logo {
+  font-size: 1.1rem;
+  color: #031927;
+  font-weight: 500;
 }
 
-.shop-container {
-  padding: 25px;
+#nav-cart-icon {
+  font-size: 1.8rem;
+  cursor: pointer;
 }
 
-.shop-container .shop-content {
+section {
+  padding: 5rem 0 3rem;
+}
+
+.section-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+.shop {
+  margin-top: 2rem;
+}
+
+.shop .shop-content {
+  margin-top: 2rem;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (minmax(220px, auto))[auto-fit];
@@ -49,35 +73,35 @@ body * {
   gap: 1.5rem;
 }
 
-.shop-container .shop-item {
+.shop .shop-item {
   position: relative;
 }
 
-.shop-container .shop-item:hover {
+.shop .shop-item:hover {
   padding: 10px;
   border: 3px solid #031927;
   -webkit-transition: 0.4s;
   transition: 0.4s;
 }
 
-.shop-container .shop-item .shop-item-image {
+.shop .shop-item .shop-item-image {
   width: 100%;
   height: auto;
   margin-bottom: 0.5rem;
 }
 
-.shop-container .shop-item .shop-item-title {
+.shop .shop-item .shop-item-title {
   font-size: 1.2rem;
   font-weight: 600;
   text-transform: uppercase;
   margin-bottom: 0.5rem;
 }
 
-.shop-container .shop-item .shop-item-price {
+.shop .shop-item .shop-item-price {
   font-weight: 500;
 }
 
-.shop-container .shop-item .shop-item-add-icon {
+.shop .shop-item .shop-item-add-icon {
   position: absolute;
   bottom: 0;
   right: 0;
@@ -89,7 +113,7 @@ body * {
   color: white;
 }
 
-.shop-container .shop-item .shop-item-add-icon:hover {
+.shop .shop-item .shop-item-add-icon:hover {
   background-color: #ba1200;
 }
 
