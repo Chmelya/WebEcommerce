@@ -1,7 +1,13 @@
-import "./App.css";
+import Header from "./layouts/Header";
+import ShopSection from "./components/sections/shop/ShopSection";
 
 function App() {
-	return <div className="App"></div>;
+	return (
+		<>
+			<Header />
+			<ShopSection />
+		</>
+	);
 }
 
 export default App;

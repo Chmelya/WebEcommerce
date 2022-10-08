@@ -1,0 +1,30 @@
+// Constants
+@import "./styles/constants.scss";
+
+// Fonts
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap");
+
+// Box icons
+@import url("https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css");
+
+* {
+	scroll-padding-top: 2rem;
+	scroll-behavior: smooth;
+	color: $color-first;
+	box-sizing: border-box;
+}
+
+body {
+	background-color: $color-second;
+
+	* {
+		font-family: "Roboto", sans-serif;
+	}
+}
+
+.container {
+	max-width: 1380px;
+	margin: auto;
+	width: 100%;
+	padding-inline: $horizontal-padding;
+}
