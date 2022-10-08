@@ -1,12 +1,19 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap");
 @import url("https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css");
+* {
+  scroll-padding-top: 2rem;
+  scroll-behavior: smooth;
+  color: #031927;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
 body {
   background-color: #9dd1f1;
 }
 
 body * {
   font-family: "Roboto", sans-serif;
-  color: #031927;
 }
 
 header {
@@ -33,25 +40,36 @@ header {
   padding: 20px 0;
 }
 
-.container {
-  max-width: 1300px;
-  margin: auto;
-  width: 100%;
-}
-
-.logo {
+.nav .logo {
   font-size: 1.1rem;
   color: #031927;
   font-weight: 500;
 }
 
-#nav-cart-icon {
+.nav .nav-icons {
+  width: 15%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.nav .nav-icons i {
   font-size: 1.8rem;
   cursor: pointer;
 }
 
+.container {
+  max-width: 1380px;
+  margin: auto;
+  width: 100%;
+  padding-inline: 20px;
+}
+
 section {
-  padding: 5rem 0 3rem;
+  padding: 4rem 0 3rem;
 }
 
 .section-title {

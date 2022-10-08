@@ -7,12 +7,18 @@
 // Box icons
 @import url("https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css");
 
+* {
+	scroll-padding-top: 2rem;
+	scroll-behavior: smooth;
+	color: $color-first;
+	box-sizing: border-box;
+}
+
 body {
 	background-color: $color-second;
 
 	* {
 		font-family: "Roboto", sans-serif;
-		color: $color-first;
 	}
 }
 
@@ -31,27 +37,34 @@ header {
 	align-items: center;
 	justify-content: space-between;
 	padding: 20px 0;
+
+	.logo {
+		font-size: 1.1rem;
+		color: $color-first;
+		font-weight: 500;
+	}
+
+	.nav-icons {
+		width: 15%;
+		display: flex;
+		justify-content: space-between;
+
+		i {
+			font-size: 1.8rem;
+			cursor: pointer;
+		}
+	}
 }
 
 .container {
-	max-width: 1300px;
+	max-width: 1380px;
 	margin: auto;
 	width: 100%;
-}
-
-.logo {
-	font-size: 1.1rem;
-	color: $color-first;
-	font-weight: 500;
-}
-
-#nav-cart-icon {
-	font-size: 1.8rem;
-	cursor: pointer;
+	padding-inline: $horizontal-padding;
 }
 
 section {
-	padding: 5rem 0 3rem;
+	padding: 4rem 0 3rem;
 }
 
 .section-title {
