@@ -6,13 +6,16 @@ const Cart = () => {
 			<div className="cart">
 				<h2 className="cart-title">Your Cart</h2>
 				<CartItem />
+				<CartItem />
+				<CartItem />
+				<CartItem />
 				<div className="cart-content">
 					<div className="cart-total">
 						<div className="cart-total-title">Total</div>
 						<div className="cart-total-price">$523</div>
 					</div>
 					<button className="cart-btn-buy">Buy Now</button>
-					<i className="bx bx-x" id="cart-close"></i>
+					<i className="bx bx-x" id="cart-close" onClick={onClickCartClose}></i>
 				</div>
 			</div>
 		</>
@@ -37,6 +40,12 @@ const CartItem = () => {
 			</div>
 		</>
 	);
+};
+
+let cart = document.querySelector(".cart");
+
+const onClickCartClose = () => {
+	cart.classList.remove("active");
 };
 
 export default Cart;
