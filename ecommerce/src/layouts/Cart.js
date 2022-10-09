@@ -5,11 +5,11 @@ const Cart = () => {
 		<>
 			<div className="cart">
 				<h2 className="cart-title">Your Cart</h2>
-				<CartItem />
-				<CartItem />
-				<CartItem />
-				<CartItem />
 				<div className="cart-content">
+					<CartItem />
+					<CartItem />
+					<CartItem />
+					<CartItem />
 					<div className="cart-total">
 						<div className="cart-total-title">Total</div>
 						<div className="cart-total-price">$523</div>
@@ -20,6 +20,11 @@ const Cart = () => {
 			</div>
 		</>
 	);
+};
+
+const onClickCartClose = () => {
+	let cart = document.querySelector(".cart");
+	cart.classList.remove("active");
 };
 
 const CartItem = () => {
@@ -34,18 +39,12 @@ const CartItem = () => {
 				<div className="cart-item-details">
 					<h2 className="cart-item-title">Shirt</h2>
 					<span className="cart-item-price">23$</span>
-					<input className="cart-item-quantity" type="number" value="1" />
+					{/* <input className="cart-item-quantity" type="number" value="1" /> */}
 				</div>
 				<i className="bx bx-trash-alt cart-item-remove"></i>
 			</div>
 		</>
 	);
-};
-
-let cart = document.querySelector(".cart");
-
-const onClickCartClose = () => {
-	cart.classList.remove("active");
 };
 
 export default Cart;

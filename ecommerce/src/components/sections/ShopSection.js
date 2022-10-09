@@ -2,9 +2,9 @@ import "./ShopSection.scss";
 
 const ShopSection = () => {
 	return (
-		<section class="shop container">
-			<h2 class="section-title">Shop Products</h2>
-			<div class="shop-content">
+		<section className="shop container">
+			<h2 className="section-title">Shop Products</h2>
+			<div className="shop-content">
 				<ShopItem />
 				<ShopItem />
 				<ShopItem />

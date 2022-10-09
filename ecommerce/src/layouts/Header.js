@@ -14,7 +14,7 @@ const Header = () => {
 						<i
 							className="bx bx-basket"
 							id="cart-icon"
-							onClick={onClickCart}
+							onClick={onClickCartOpen}
 						></i>
 						<i className="bx bx-log-out-circle"></i>
 					</div>
@@ -24,9 +24,8 @@ const Header = () => {
 	);
 };
 
-let cart = document.querySelector(".cart");
-
-const onClickCart = () => {
+let onClickCartOpen = () => {
+	let cart = document.querySelector(".cart");
 	cart.classList.add("active");
 };
 
