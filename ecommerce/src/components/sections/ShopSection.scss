@@ -1,0 +1,56 @@
+@import "../../assets/style/constants";
+@import "./Section.scss";
+
+.shop {
+	margin-top: 2rem;
+
+	.shop-content {
+		margin-top: 2rem;
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(220px, auto));
+		gap: 1.5rem;
+	}
+
+	.shop-item {
+		position: relative;
+
+		&:hover {
+			padding: 10px;
+			border: 3px solid $color-first;
+			transition: 0.4s;
+		}
+
+		.shop-item-image {
+			width: 100%;
+			height: auto;
+			margin-bottom: 0.5rem;
+		}
+
+		.shop-item-title {
+			font-size: 1.2rem;
+			font-weight: 600;
+			text-transform: uppercase;
+			margin-bottom: 0.5rem;
+		}
+
+		.shop-item-price {
+			font-weight: 500;
+		}
+
+		.shop-item-add-icon {
+			position: absolute;
+			bottom: 0;
+			right: 0;
+			margin: 0 5px 5px 0px;
+			padding: 10px;
+			cursor: pointer;
+			border-radius: 10px;
+			background-color: $color-third;
+			color: white;
+
+			&:hover {
+				background-color: $color-fourth; //TODO: choose color
+			}
+		}
+	}
+}
