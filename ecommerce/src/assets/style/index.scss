@@ -29,5 +29,6 @@ body {
 	max-width: 1380px;
 	margin: auto;
 	width: 100%;
-	padding-inline: $horizontal-padding;
+	//TODO: remove !important. that's required for .nav .container
+	padding-inline: $horizontal-padding !important;
 }

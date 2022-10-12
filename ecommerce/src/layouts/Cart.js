@@ -1,6 +1,14 @@
+import React, { useState } from "react";
+
 import "./Cart.scss";
 
 const Cart = () => {
+	const [totalPrice, setTotalPrice] = useState(0);
+
+	let updateTotal = () => {
+		setTotalPrice(22);
+	};
+
 	return (
 		<>
 			<div className="cart">
@@ -12,19 +20,14 @@ const Cart = () => {
 					<CartItem />
 					<div className="cart-total">
 						<div className="cart-total-title">Total</div>
-						<div className="cart-total-price">$523</div>
+						<div className="cart-total-price">${totalPrice}</div>
 					</div>
 					<button className="cart-btn-buy">Buy Now</button>
-					<i className="bx bx-x" id="cart-close" onClick={onClickCartClose}></i>
+					<i className="bx bx-x" id="cart-close" onClick={updateTotal}></i>
 				</div>
 			</div>
 		</>
 	);
-};
-
-const onClickCartClose = () => {
-	let cart = document.querySelector(".cart");
-	cart.classList.remove("active");
 };
 
 const CartItem = () => {
@@ -45,6 +48,11 @@ const CartItem = () => {
 			</div>
 		</>
 	);
+};
+
+let onClickCartClose = () => {
+	let cart = document.querySelector(".cart");
+	cart.classList.remove("active");
 };
 
 export default Cart;

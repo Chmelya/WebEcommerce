@@ -34,4 +34,6 @@ const ShopItem = () => {
 	);
 };
 
+let onClick = () => {};
+
 export default ShopSection;
