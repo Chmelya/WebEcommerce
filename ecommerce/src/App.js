@@ -1,4 +1,4 @@
-import Layout from "./layouts/Layout";
+import Layout from "./layout/Layout";
 import ShopSection from "./components/sections/ShopSection";
 
 function App() {
