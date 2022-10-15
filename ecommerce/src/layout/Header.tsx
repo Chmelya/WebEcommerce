@@ -25,7 +25,7 @@ const Header = () => {
 };
 
 let onClickCartOpen = () => {
-	let cart = document.querySelector(".cart");
+	let cart = document.querySelector(".cart") as HTMLElement;
 	cart.classList.add("active");
 };
 

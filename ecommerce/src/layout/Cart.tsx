@@ -20,15 +20,17 @@ const Cart = () => {
 	);
 };
 
+//TODO: remove any
 const ListCart = () => {
-	const cartItems = getCartProducts().map((product) => {
+	const cartItems = getCartProducts().map((product: any) => {
 		return <CartItem {...product} key={product.id} />;
 	});
 
 	return <>{cartItems}</>;
 };
 
-const CartItem = (product) => {
+//TODO: remove any
+const CartItem = (product: any) => {
 	return (
 		<>
 			<div className="cart-item" key={product.id}>
@@ -49,7 +51,7 @@ const CartItem = (product) => {
 };
 
 const onClickCartClose = () => {
-	const cart = document.querySelector(".cart");
+	const cart = document.querySelector(".cart") as HTMLElement;
 	cart.classList.remove("active");
 };
 

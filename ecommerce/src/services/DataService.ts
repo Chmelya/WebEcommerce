@@ -1,5 +1,5 @@
-import products from "../data/products";
-import cartProducts from "../data/cartProducts";
+import products from "../data/products.json";
+import cartProducts from "../data/cartProducts.json";
 
 // TODO: Remove moq
 

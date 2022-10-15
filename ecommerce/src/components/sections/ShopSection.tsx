@@ -15,14 +15,15 @@ const ShopSection = () => {
 };
 
 const ListItems = () => {
-	const products = getProducts().map((product) => {
+	const products = getProducts().map((product: any) => {
 		return <ShopItem {...product} key={product.id} />;
 	});
 
 	return <>{products}</>;
 };
 
-const ShopItem = (product) => {
+//TODO
+const ShopItem = (product: any) => {
 	return (
 		<>
 			<div className="shop-item">
