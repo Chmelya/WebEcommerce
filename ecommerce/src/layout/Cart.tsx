@@ -1,13 +1,19 @@
 import "./Cart.scss";
-import { getCartProducts } from "../services/DataService";
+import { useCart } from "../context/CartContext";
+import { getProductsByCart } from "../services/DataService";
+
+import Product from "../models/Product";
 
 const Cart = () => {
+	const { cartItems } = useCart();
+	const products = getProductsByCart(cartItems);
+
 	return (
 		<>
 			<div className="cart">
 				<h2 className="cart-title">Your Cart</h2>
 				<div className="cart-content">
-					<ListCart />
+					{/* <ListCart items={cartItems} /> */}
 					<div className="cart-total">
 						<div className="cart-total-title">Total</div>
 						<div className="cart-total-price">$22</div>
@@ -21,8 +27,18 @@ const Cart = () => {
 };
 
 //TODO: remove any
-const ListCart = () => {
-	const cartItems = getCartProducts().map((product: any) => {
+const ListCart = (items: Product[]) => {
+	// const cartItems = () => {
+	// 	if (items?.count === 0) {
+	// 		return <></>;
+	// 	} else {
+	// 		items.map((product: any) => {
+	// 			return <CartItem {...product} key={product.id} />;
+	// 		});
+	// 	}
+	// };
+
+	const cartItems = items.map((product: any) => {
 		return <CartItem {...product} key={product.id} />;
 	});
 

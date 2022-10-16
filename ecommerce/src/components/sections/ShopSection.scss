@@ -36,19 +36,37 @@
 			font-weight: 500;
 		}
 
-		.shop-item-add-icon {
+		.shop-icon-holder {
 			position: absolute;
 			bottom: 0;
 			right: 0;
 			margin: 0 5px 5px 0px;
-			padding: 10px;
-			cursor: pointer;
-			border-radius: 10px;
-			background-color: $color-third;
-			color: white;
+			width: 50%;
+			display: flex;
+			justify-content: flex-end;
+			gap: 3px;
 
-			&:hover {
-				background-color: $color-fourth; //TODO: choose color
+			.shop-item-icon {
+				padding: 10px;
+				cursor: pointer;
+				border-radius: 10px;
+				background-color: $color-third;
+				color: white;
+				transition: 0.4s;
+
+				&:hover {
+					background-color: $color-fourth; //TODO: choose color
+				}
+
+				&.remove {
+					background-color: $color-fourth;
+				}
+
+				&.quantity {
+					cursor: auto;
+					color: $color-first;
+					background-color: white;
+				}
 			}
 		}
 	}

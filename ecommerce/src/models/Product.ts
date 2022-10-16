@@ -5,7 +5,13 @@ class Product {
 	price: string;
 	description: string;
 
-	constructor(id: string, title: string, image: string, price: string, description: string) {
+	constructor(
+		id: string,
+		title: string,
+		image: string,
+		price: string,
+		description: string
+	) {
 		this.id = id;
 		this.title = title;
 		this.image = image;
@@ -13,3 +19,5 @@ class Product {
 		this.description = description;
 	}
 }
+
+export default Product;
