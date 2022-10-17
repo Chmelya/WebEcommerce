@@ -1,5 +1,5 @@
 import { createContext, ReactNode, useContext, useState } from "react";
-import CartItem from "../models/CartItem";
+import CartProduct from "../models/CartProduct";
 
 type CartProviderProps = {
 	children: ReactNode;
@@ -10,7 +10,7 @@ type CartContext = {
 	increaseCartQuantity: (id: string) => void;
 	decreaseCartQuantity: (id: string) => void;
 	removeFromCart: (id: string) => void;
-	cartItems: CartItem[];
+	cartItems: CartProduct[];
 };
 
 const CartContext = createContext({} as CartContext);
@@ -20,7 +20,7 @@ export function useCart() {
 }
 
 export function CartProvider({ children }: CartProviderProps) {
-	const [cartItems, setCartItems] = useState<CartItem[]>([]);
+	const [cartItems, setCartItems] = useState<CartProduct[]>([]);
 
 	function getItemQuantity(id: string) {
 		const item = cartItems.find((item) => item.id === id);
