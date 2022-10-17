@@ -10,6 +10,11 @@ const Cart = () => {
 		return total + getProductById(item.id).price * item.quantity;
 	}, 0);
 
+	const onClickCartClose = () => {
+		const cart = document.querySelector(".cart") as HTMLElement;
+		cart.classList.remove("active");
+	};
+
 	return (
 		<>
 			<div className="cart">
@@ -28,11 +33,6 @@ const Cart = () => {
 			</div>
 		</>
 	);
-};
-
-const onClickCartClose = () => {
-	const cart = document.querySelector(".cart") as HTMLElement;
-	cart.classList.remove("active");
 };
 
 export default Cart;

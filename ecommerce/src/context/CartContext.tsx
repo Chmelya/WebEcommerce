@@ -11,6 +11,7 @@ type CartContext = {
 	decreaseCartQuantity: (id: string) => void;
 	removeFromCart: (id: string) => void;
 	cartItems: CartProduct[];
+	productsCount: number;
 };
 
 const CartContext = createContext({} as CartContext);
@@ -21,6 +22,10 @@ export function useCart() {
 
 export function CartProvider({ children }: CartProviderProps) {
 	const [cartItems, setCartItems] = useState<CartProduct[]>([]);
+
+	const productsCount = cartItems.reduce((total, item) => {
+		return (total += 1);
+	}, 0);
 
 	function getItemQuantity(id: string) {
 		const item = cartItems.find((item) => item.id === id);
@@ -46,7 +51,7 @@ export function CartProvider({ children }: CartProviderProps) {
 	function decreaseCartQuantity(id: string) {
 		setCartItems((items) => {
 			if (items.find((item) => item.id === id)?.quantity === 1) {
-				return items.filter((item) => item.id != id);
+				return items.filter((item) => item.id !== id);
 			} else {
 				return items.map((item) => {
 					if (item.id === id) {
@@ -61,7 +66,7 @@ export function CartProvider({ children }: CartProviderProps) {
 
 	function removeFromCart(id: string) {
 		setCartItems((items) => {
-			return items.filter((item) => item.id != id);
+			return items.filter((item) => item.id !== id);
 		});
 	}
 
@@ -73,6 +78,7 @@ export function CartProvider({ children }: CartProviderProps) {
 				decreaseCartQuantity,
 				removeFromCart,
 				cartItems,
+				productsCount,
 			}}
 		>
 			{children}

@@ -1,5 +1,5 @@
 import Cart from "./Cart/Cart";
-import Header from "./Header";
+import Header from "./Header/Header";
 
 const Layout = () => {
 	return (
