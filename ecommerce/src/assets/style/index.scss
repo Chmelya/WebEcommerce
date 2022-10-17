@@ -25,9 +25,19 @@ body {
 	}
 }
 
+section {
+	padding: 4rem 0 3rem;
+
+	.section-title {
+		font-size: 1.5rem;
+		font-weight: 600;
+		text-align: center;
+	}
+}
+
 .container {
 	max-width: 1380px;
-	margin: auto;
+	margin-inline: auto;
 	width: 100%;
 	padding-inline: $horizontal-padding;
 }
