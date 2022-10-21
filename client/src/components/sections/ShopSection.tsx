@@ -5,7 +5,7 @@ import { useCart } from "../../context/CartContext";
 const ShopSection = () => {
 	return (
 		<>
-			<section className="shop container">
+			<section className="shop-section container">
 				<h2 className="section-title">Shop Products</h2>
 				<div className="shop-content">
 					<ListItems />
@@ -50,6 +50,7 @@ const ShopItem = (product: any) => {
 							></i>
 						) : (
 							<>
+								{/* TODO: Refactor */}
 								{/* <i
 									className="bx bx-x shop-item-icon remove"
 									onClick={() => removeFromCart(id)}

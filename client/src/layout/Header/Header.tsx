@@ -19,7 +19,7 @@ const Header = () => {
 								id="cart-icon"
 								onClick={onClickCartOpen}
 							></i>
-							<Circle />
+							<CartCircle />
 						</div>
 						<i className="bx bx-log-out-circle"></i>
 					</div>
@@ -29,7 +29,7 @@ const Header = () => {
 	);
 };
 
-const Circle = () => {
+const CartCircle = () => {
 	const { productsCount } = useCart();
 
 	const getTotalCount = () => {
