@@ -4,7 +4,6 @@ import Layout from "./layout/Layout";
 import ShopSection from "./components/sections/ShopSection";
 import ProfileSection from "./components/profile/Profile";
 
-
 function App() {
 	return (
 		<>
