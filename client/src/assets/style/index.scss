@@ -23,6 +23,21 @@ body {
 	* {
 		font-family: "Roboto", sans-serif;
 	}
+
+	h2 {
+		font-size: 1.5rem;
+		font-weight: 600;
+	}
+
+	h3 {
+		font-size: 1.4rem;
+		font-weight: 500;
+	}
+
+	h4 {
+		font-size: 1.2rem;
+		font-weight: 500;
+	}
 }
 
 section {
@@ -30,8 +45,6 @@ section {
 	padding: 4rem 0 3rem;
 
 	.section-title {
-		font-size: 1.5rem;
-		font-weight: 600;
 		text-align: center;
 	}
 }

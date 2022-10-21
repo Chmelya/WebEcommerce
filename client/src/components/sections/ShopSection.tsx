@@ -50,6 +50,7 @@ const ShopItem = (product: any) => {
 							></i>
 						) : (
 							<>
+								{/* TODO: Refactor */}
 								{/* <i
 									className="bx bx-x shop-item-icon remove"
 									onClick={() => removeFromCart(id)}
